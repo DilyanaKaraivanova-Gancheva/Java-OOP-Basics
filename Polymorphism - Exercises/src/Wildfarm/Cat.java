@@ -30,7 +30,7 @@ public class Cat extends Felime {
 
     @Override
     public String toString(){
-        DecimalFormat df = new DecimalFormat("#.########");
+        DecimalFormat df = new DecimalFormat("#.##");
         return this.getClass().getSimpleName() + "[" + this.getAnimalName() + ", " + this.getBreed() + ", " +  df.format(this.getAnimalWeight())
         + ", " + this.getLivingRegeon() + ", " + (this.getFoodEaten()) + "]";
     }
