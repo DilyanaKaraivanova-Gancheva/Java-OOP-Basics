@@ -10,6 +10,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+        List<Animal> animalList = new ArrayList<>();
+
         String input = reader.readLine();
 
             while (!("End".equals(input))) {
@@ -37,7 +39,7 @@ public class Main {
                     }catch (IllegalArgumentException ex){
                     System.out.println(ex.getMessage());
                 }
-                            System.out.println(animal);
+                           animalList.add(animal);
                             break;
                         case "Tiger":
                             try{
@@ -47,7 +49,7 @@ public class Main {
                     }catch (IllegalArgumentException ex){
                     System.out.println(ex.getMessage());
                 }
-                            System.out.println(animal);
+                            animalList.add(animal);
                             break;
                         case "Mouse":
                             try {
@@ -57,7 +59,7 @@ public class Main {
                             }catch (IllegalArgumentException ex){
                                 System.out.println(ex.getMessage());
                             }
-                            System.out.println(animal);
+                            animalList.add(animal);
                             break;
                         case "Zebra":
                             try {
@@ -68,10 +70,15 @@ public class Main {
                     }catch (IllegalArgumentException ex){
 
                             }
-                            System.out.println(animal);
+                            animalList.add(animal);
                             break;
                     }
                 input = reader.readLine();
             }
+
+        for (Animal animal : animalList) {
+            System.out.println(animal);
+        }
     }
 }
+
