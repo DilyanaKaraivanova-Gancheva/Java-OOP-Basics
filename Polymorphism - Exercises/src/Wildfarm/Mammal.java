@@ -20,7 +20,7 @@ public abstract class Mammal extends Animal{
 
     @Override
     public String toString(){
-        DecimalFormat df = new DecimalFormat("#.########");
+        DecimalFormat df = new DecimalFormat("#.##");
         return this.getClass().getSimpleName() + "[" + this.getAnimalName() +  ", " +  df.format(this.getAnimalWeight())
                 + ", " + this.getLivingRegeon() + ", " + (this.getFoodEaten()) + "]";
     }
