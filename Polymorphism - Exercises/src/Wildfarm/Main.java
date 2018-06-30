@@ -68,7 +68,7 @@ public class Main {
                                 animal.makeSound();
                                 animal.eat(food);
                     }catch (IllegalArgumentException ex){
-
+                                System.out.println(ex.getMessage());
                             }
                             animalList.add(animal);
                             break;
